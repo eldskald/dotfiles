@@ -1,0 +1,41 @@
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Space"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "K"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "J"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "M"
+mods = "Control|Shift"
+
+
+# Hack to turn Ctrl+Backspace into Ctrl+W
+[[keyboard.bindings]]
+chars = "\u0017"
+key = "Back"
+mods = "Control"
