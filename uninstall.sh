@@ -1,6 +1,21 @@
 #!/bin/bash
 
-rm ~/.zshrc
-rm ~/.oh-my-zsh/custom/themes/eldskald.zsh-theme
-rm ~/.config/alacritty
-rm ~/.config/nvim
+if [ $# == 0 ]
+then
+    sh uninstall neovim alacritty zsh
+fi
+
+for x in $@
+do
+    if [ $x == "neovim" ]
+    then
+        rm ~/.config/nvim
+    elif [ $x == "alacritty" ]
+    then
+        rm ~/.config/alacritty
+    elif [ $x == "zsh" ]
+    then
+        rm ~/.zshrc
+        rm ~/.oh-my-zsh/custom/themes/eldskald.zsh-theme
+    fi
+done

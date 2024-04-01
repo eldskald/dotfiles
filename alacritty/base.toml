@@ -1,0 +1,43 @@
+[env]
+TERM = "alacritty"
+
+[shell]
+program = "/bin/zsh"
+
+[selection]
+save_to_clipboard = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "full"
+opacity = 1.0
+
+[window.padding]
+x = 4
+y = 4
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "HurmitNerdFont"
+style = "Bold"
+
+[font.bold_italic]
+family = "HurmitNerdFont"
+style = "Bold Italic"
+
+[font.italic]
+family = "HurmitNerdFont"
+style = "Italic"
+
+[font.normal]
+family = "HurmitNerdFont"
+style = "Regular"

@@ -1,0 +1,5 @@
+# Put here your overrides.
+# Configs in this file will override the base ones and are ignored by git.
+
+#[window]
+#opacity = 0.9
