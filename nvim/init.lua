@@ -39,3 +39,5 @@ require('lazy').setup('plugins', {
         },
     },
 })
+
+require('custom.override')

@@ -10,6 +10,10 @@ do
     if [ $x == "neovim" ]
     then
         ln -s ~/dotfiles/nvim/ ~/.config/nvim
+        mkdir ~/.config/nvim/lua/custom
+        cp override.lua.example ~/.config/nvim/lua/custom/override.lua
+        cp lsp-configs.lua.example ~/.config/nvim/lua/custom/lsp-configs.lua
+        cp none-ls-sources.lua.example ~/.config/nvim/lua/custom/none-ls-sources.lua
     elif [ $x == "alacritty" ]
     then
         ln -s ~/dotfiles/alacritty/ ~/.config/alacritty/

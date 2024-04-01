@@ -1,0 +1,4 @@
+-- Override file to change the configs without messing with the git repository,
+-- as it will be ignored by it.
+
+-- vim.opt.mouse = 'a'

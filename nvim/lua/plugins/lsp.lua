@@ -70,42 +70,7 @@ return {
             info = 'i',
         })
 
-        -- Configs for lua
-        require('lspconfig').lua_ls.setup({
-            settings = {
-                Lua = {
-                    runtime = {
-                        version = 'LuaJIT',
-                    },
-                    diagnostics = {
-                        enable = false, -- use luacheck only
-                    },
-                    workspace = {
-                        library = vim.api.nvim_get_runtime_file('', true),
-                        checkThirdParty = false,
-                    },
-                    telemetry = {
-                        enable = false,
-                    },
-                },
-            },
-        })
-
-        -- Configs for C/C++
-        require('lspconfig').clangd.setup({})
-
-        -- Configs for GLSL
-        require('lspconfig').glsl_analyzer.setup({})
-
-        -- Configs for HTML/CSS/JavaScript/TypeScript as well as tailwindcss
-        require('lspconfig').tsserver.setup({})
-        require('lspconfig').html.setup({})
-        require('lspconfig').cssls.setup({})
-        require('lspconfig').tailwindcss.setup({})
-        require('lspconfig').eslint.setup({})
-
-        -- Configs for GDScript
-        require('lspconfig').gdscript.setup({})
+        require('custom.lsp-configs')
 
         lsp.setup()
 
@@ -139,20 +104,10 @@ return {
             },
         })
 
-        -- Linting
-        local null_ls = require('null-ls')
-        local b = null_ls.builtins
-
-        null_ls.setup({
+        -- Linters and formatters
+        require('null-ls').setup({
             debug = true,
-            sources = {
-                -- Linters
-                b.diagnostics.selene,
-                -- Formatters
-                b.formatting.prettier,
-                b.formatting.stylua,
-                b.formatting.clang_format,
-            },
+            sources = require('custom.none-ls-sources'),
         })
 
         -- Diagnostics

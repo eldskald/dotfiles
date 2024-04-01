@@ -1,0 +1,19 @@
+-- List your none_ls sources. Since each machine might install them
+-- from different sources and there's no need to include all of them
+-- on every machine, it's better to do it this way.
+-- This file is ignored by the repository.
+
+local b = require('null-ls').builtins
+
+return {
+
+    -- Lua
+    -- b.diagnostics.selene,
+    -- b.formatting.stylua,
+
+    -- Javascript
+    -- b.formatting.prettier,
+
+    -- C/C++
+    -- b.formatting.clang_format,
+}
