@@ -18,5 +18,6 @@ do
     then
         ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
         ln -s ~/dotfiles/zsh/eldskald.zsh-theme ~/.oh-my-zsh/custom/themes/eldskald.zsh-theme
+        cp .zshrc_append.example ~/.zshrc_append
     fi
 done
