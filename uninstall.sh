@@ -2,7 +2,7 @@
 
 if [ $# == 0 ]
 then
-    sh uninstall neovim alacritty zsh
+    sh uninstall.sh neovim alacritty zsh
 fi
 
 for x in $@

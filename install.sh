@@ -16,12 +16,18 @@ do
         cp none-ls-sources.lua.example ~/.config/nvim/lua/custom/none-ls-sources.lua
     elif [ $x == "alacritty" ]
     then
-        ln -s ~/dotfiles/alacritty/ ~/.config/alacritty/
+        ln -s ~/dotfiles/alacritty/ ~/.config/alacritty
         cp override.toml.example ./alacritty/override.toml
     elif [ $x == "zsh" ]
     then
         ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
         ln -s ~/dotfiles/zsh/eldskald.zsh-theme ~/.oh-my-zsh/custom/themes/eldskald.zsh-theme
         cp .zshrc_append.example ~/.zshrc_append
+    elif [ $x == "kde" ]
+    then
+        konsave -r eldskald
+        cat ~/dotfiles/kde/x* > ~/dotfiles/kde/eldskald.knsv
+        konsave -i ~/dotfiles/kde/eldskald.knsv
+        konsave -a eldskald
     fi
 done

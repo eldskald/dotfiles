@@ -1,26 +1,34 @@
 # Rafael Bordoni's dotfiles
 
-WIP
+My personal Linux ricing. Configurations for [KDE Plasma 6](https://kde.org/plasma-desktop/), [neovim](https://neovim.io), [alacritty](https://alacritty.org/) and [zsh](https://wiki.archlinux.org/title/zsh). It tries to be very minimal, with no plugins or scripts for [Plasma](https://kde.org/plasma-desktop/) except for a single [colorscheme](TokyoNight.colors) and an [icon set](TokyoNight-SE.tar.bz2). For [neovim](https://neovim.io), there's only [ripgrep](https://github.com/BurntSushi/ripgrep) for [telescope](https://github.com/nvim-telescope/telescope.nvim). For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/) and for [alacritty](https://alacritty.org/), there's a single font already bundled on the [Plasma](https://kde.org/plasma-desktop/) configs.
+
+The icons are straight from [this repository](https://github.com/ljmill/tokyo-night-icons), and the colorscheme is a slightly modified version from [this one](https://github.com/Jayy-Dev/Plasma-Tokyo-Night/blob/plasma-6/colorscheme/TokyoNight.colors), just making the window title bars the same color as the usual background so it blends in with the terminal background and other apps.
 
 ## Dependencies
 
-These dotfiles are for [neovim](https://neovim.io) with [ripgrep](https://github.com/BurntSushi/ripgrep), [zsh](https://wiki.archlinux.org/title/zsh) with [oh-my-zsh](https://ohmyz.sh/) and [alacritty](https://alacritty.org/), with the font [HurmitNerdFont](alacritty/Hermit.zip).
+For [KDE Plamsa](https://kde.org/plasma-desktop/), you need [konsave](https://github.com/Prayag2/konsave) just to install the dotfiles, you can remove it afterwards.
+
+For [neovim](https://neovim.io), you need [ripgrep](https://github.com/BurntSushi/ripgrep).
+
+For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/).
+
+For [alacritty](https://alacritty.org/), you need the [HurmitNerdFont](Hermit.zip), but it already comes on the [KDE Plasma](https://kde.org/plasma-desktop/) settings so you don't need to install it if you install [KDE](https://kde.org/plasma-desktop/) config files too.
+
+I'm also including the [colorscheme](TokyoNight.colors) and [icons](TokyoNight-SE.tar.bz2) in case you want to use them on your own [Plasma](https://kde.org/plasma-desktop/) configs without needing to extract them from mine.
 
 ## Installation
 
-First, clone or download this repository into your home directory. It must be on the home directory. Install the [HurmitNerdFont](Hermit.zip) on your system, install dependencies and then run `sh install.sh`.
+First, clone or download this repository into your home directory. It must be on the home directory. Don't forget to have all the dependencies for the dotfiles you'll install ready before doing that.
 
-You can also append `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh`.
-
-After that, modifying the contents of the files in this directory should modify the configurations for [neovim](https://neovim.io), [zsh](https://wiki.archlinux.org/title/zsh) and [alacritty](https://alacritty.org/).
+To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh`. _NOTE:_ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plamsa](), install the [HurmitNerdFont](Hermit.zip) on your system.
 
 ## Uninstalling
 
-Just run `sh uninstall.sh`. And just like the install script, you can also append `neovim`, `zsh` or `alacritty` to uninstall just the configs for said software.
+For everything except [KDE Plamsa](https://kde.org/plasma-desktop/), Just run `sh uninstall.sh`. And just like the install script, you can also append `neovim`, `zsh` or `alacritty` to uninstall just the configs for said software, but doesn't work for [KDE](https://kde.org/plasma-desktop/). See [konsave](https://github.com/Prayag2/konsave) for how to backup your own config before applying these.
 
 ## Updating
 
-Just do `git pull` on this repository and configs for everything you're using will be updated.
+Just do `git pull` on this repository and configs for everything you're using will be updated. You'll have to run the [konsave](https://github.com/Prayag2/konsave) commands to update [KDE Plasma](http://kde.org/plasma-desktop/), the same ones on the installation section.
 
 ## Customizing
 
@@ -41,3 +49,7 @@ After installing [neovim](https://neovim.io) dotfiles, the directory `~/.config/
 ### Alacritty
 
 After installing the dotfiles, a `override.toml` file will be added to `~/.config/alacritty/` to change anything, like window opacity, mappings or font.
+
+### KDE Plasma
+
+These are not in this repository, so you can mess around and change your settings without git seeing anything. You can run `konsave -a eldskald` to re-apply them back, or just `sh install.sh kde` should work too.
