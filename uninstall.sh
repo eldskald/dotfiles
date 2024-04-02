@@ -10,9 +10,11 @@ do
     if [ $x == "neovim" ]
     then
         rm ~/.config/nvim
+        rm ~/dotfiles/nvim/lua/custom
     elif [ $x == "alacritty" ]
     then
         rm ~/.config/alacritty
+        rm ~/dotfiles/alacritty/override.toml
     elif [ $x == "zsh" ]
     then
         rm ~/.zshrc
