@@ -10,7 +10,7 @@ The icons are straight from [this repository](https://github.com/ljmill/tokyo-ni
 
 ## Dependencies
 
-For [KDE Plamsa](https://kde.org/plasma-desktop/), you need [konsave](https://github.com/Prayag2/konsave) just to install the dotfiles, you can remove it afterwards.
+For [KDE Plasma](https://kde.org/plasma-desktop/), you need [konsave](https://github.com/Prayag2/konsave) just to install the dotfiles, you can remove it afterwards.
 
 For [neovim](https://neovim.io), you need [ripgrep](https://github.com/BurntSushi/ripgrep).
 
@@ -24,11 +24,11 @@ I'm also including the [colorscheme](TokyoNight.colors) and [icons](TokyoNight-S
 
 First, clone or download this repository into your home directory. It must be on the home directory. Don't forget to have all the dependencies for the dotfiles you'll install ready before doing that.
 
-To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh`. _NOTE:_ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plamsa](), install the [HurmitNerdFont](Hermit.zip) on your system.
+To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh kde`. __NOTE:__ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plasma](), install the [HurmitNerdFont](Hermit.zip) on your system.
 
 ## Uninstalling
 
-For everything except [KDE Plamsa](https://kde.org/plasma-desktop/), Just run `sh uninstall.sh`. And just like the install script, you can also append `neovim`, `zsh` or `alacritty` to uninstall just the configs for said software, but doesn't work for [KDE](https://kde.org/plasma-desktop/). See [konsave](https://github.com/Prayag2/konsave) for how to backup your own config before applying these.
+For everything except [KDE Plasma](https://kde.org/plasma-desktop/), Just run `sh uninstall.sh`. And just like the install script, you can also append `neovim`, `zsh` or `alacritty` to uninstall just the configs for said software, but doesn't work for [KDE](https://kde.org/plasma-desktop/). See [konsave](https://github.com/Prayag2/konsave) for how to backup your own config before applying these.
 
 ## Updating
 
