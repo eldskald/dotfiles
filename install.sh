@@ -2,7 +2,7 @@
 
 if [ $# == 0 ]
 then
-    sh install.sh neovim alacritty zsh
+    sh install.sh neovim alacritty zsh kde
 fi
 
 for x in $@
