@@ -10,7 +10,7 @@ do
     if [ $x == "neovim" ]
     then
         rm ~/.config/nvim
-        rm ~/dotfiles/nvim/lua/custom
+        rm -r ~/dotfiles/nvim/lua/custom
     elif [ $x == "alacritty" ]
     then
         rm ~/.config/alacritty
