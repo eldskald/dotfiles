@@ -26,7 +26,7 @@ I'm also including the [colorscheme](TokyoNight.colors) and [icons](TokyoNight-S
 
 First, clone or download this repository into your home directory. It must be on the home directory. Don't forget to have all the dependencies for the dotfiles you'll install ready before doing that.
 
-To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh kde`. __NOTE:__ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plasma](), install the [HurmitNerdFont](Hermit.zip) on your system.
+To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh kde`. __NOTE:__ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plasma](https://kde.org/plasma-deskotp/), install the [HurmitNerdFont](Hermit.zip) on your system.
 
 ## Uninstalling
 
@@ -64,8 +64,8 @@ These are not in this repository, so you can mess around and change your setting
 
 ### Godot Engine
 
-There's a [Godot](https://godotengine.org/) editor saved theme and layout, just put the files in [godot](extras/godot) at `~/.config/godot`. It's basically Tokyo Night Godot, as well as my own personal layout.
+There's a [Godot](https://godotengine.org/) editor saved theme and layout, just put the files in [extras/godot](extras/godot) at `~/.config/godot`. It's basically Tokyo Night Godot, as well as my own personal layout.
 
 ### bat
 
-There's a Tokyo Night theme [bat](https://github.com/sharkdp/bat), just read [this section](https://github.com/sharkdp/bat#adding-new-themes) on how to add themes after downloading [extras/bat/tokyonight_night.tmTheme].
+There's a Tokyo Night theme [bat](https://github.com/sharkdp/bat), just read [this section](https://github.com/sharkdp/bat#adding-new-themes) on how to add themes after downloading [extras/bat/tokyonight_night.tmTheme](extras/bat/tokyonight_night.tmTheme).
