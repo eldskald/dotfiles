@@ -8,6 +8,8 @@ My personal Linux ricing. Configurations for [KDE Plasma 6](https://kde.org/plas
 
 The icons are straight from [this repository](https://github.com/ljmill/tokyo-night-icons), and the colorscheme is a slightly modified version from [this one](https://github.com/Jayy-Dev/Plasma-Tokyo-Night/blob/plasma-6/colorscheme/TokyoNight.colors), just making the window title bars the same color as the usual background so it blends in with the terminal background and other apps.
 
+Yes, this whole repository is just Tokyo Night, the DE. If you don't know the Tokyo Night theme, it's [this](https://github.com/folke/tokyonight.nvim) popular [neovim](https://neovim.io) theme. This repository has ports of this theme to many other popular open source software, including [alacritty](https://alacritty.org/) which is included here.
+
 ## Dependencies
 
 For [KDE Plasma](https://kde.org/plasma-desktop/), you need [konsave](https://github.com/Prayag2/konsave) just to install the dotfiles, you can remove it afterwards.
@@ -57,3 +59,13 @@ After installing the dotfiles, a `override.toml` file will be added to `~/.confi
 ### KDE Plasma
 
 These are not in this repository, so you can mess around and change your settings without git seeing anything. You can run `konsave -a eldskald` to re-apply them back, or just `sh install.sh kde` should work too.
+
+## Extras
+
+### Godot Engine
+
+There's a [Godot](https://godotengine.org/) editor saved theme and layout, just put the files in [godot](extras/godot) at `~/.config/godot`. It's basically Tokyo Night Godot, as well as my own personal layout.
+
+### bat
+
+There's a Tokyo Night theme [bat](https://github.com/sharkdp/bat), just read [this section](https://github.com/sharkdp/bat#adding-new-themes) on how to add themes after downloading [extras/bat/tokyonight_night.tmTheme].
