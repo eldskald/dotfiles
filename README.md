@@ -4,9 +4,9 @@
 
 ![](images/ss2.png)
 
-My personal Linux ricing. Configurations for [KDE Plasma 6](https://kde.org/plasma-desktop/), [neovim](https://neovim.io), [alacritty](https://alacritty.org/) and [zsh](https://wiki.archlinux.org/title/zsh). It tries to be very minimal, with no plugins or scripts for [Plasma](https://kde.org/plasma-desktop/) except for a single [colorscheme](TokyoNight.colors) and an [icon set](TokyoNight-SE.tar.bz2). For [neovim](https://neovim.io), there's only [ripgrep](https://github.com/BurntSushi/ripgrep) for [telescope](https://github.com/nvim-telescope/telescope.nvim). For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/) and for [alacritty](https://alacritty.org/), there's a single font already bundled on the [Plasma](https://kde.org/plasma-desktop/) configs.
+My personal Linux ricing. Configurations for [KDE Plasma 6](https://kde.org/plasma-desktop/), [neovim](https://neovim.io), [alacritty](https://alacritty.org/) and [zsh](https://wiki.archlinux.org/title/zsh). It tries to be very minimal, with no plugins or scripts for [Plasma](https://kde.org/plasma-desktop/) except for a single [colorscheme](TokyoNight.colors). For [neovim](https://neovim.io), there's only [ripgrep](https://github.com/BurntSushi/ripgrep) for [telescope](https://github.com/nvim-telescope/telescope.nvim). For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/) and for [alacritty](https://alacritty.org/), there's a single font already bundled on the [Plasma](https://kde.org/plasma-desktop/) configs.
 
-The icons are straight from [this repository](https://github.com/ljmill/tokyo-night-icons), and the colorscheme is a slightly modified version from [this one](https://github.com/Jayy-Dev/Plasma-Tokyo-Night/blob/plasma-6/colorscheme/TokyoNight.colors), just making the window title bars the same color as the usual background so it blends in with the terminal background and other apps.
+The colorscheme is a slightly modified version from [this one](https://github.com/Jayy-Dev/Plasma-Tokyo-Night/blob/plasma-6/colorscheme/TokyoNight.colors), just making the window title bars the same color as the usual background so it blends in with the terminal background and other apps.
 
 Yes, this whole repository is just Tokyo Night, the DE. If you don't know the Tokyo Night theme, it's [this](https://github.com/folke/tokyonight.nvim) popular [neovim](https://neovim.io) theme. This repository has ports of this theme to many other popular open source software, including [alacritty](https://alacritty.org/) which is included here.
 
@@ -20,7 +20,7 @@ For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://oh
 
 For [alacritty](https://alacritty.org/), you need the [HurmitNerdFont](Hermit.zip), but it already comes on the [KDE Plasma](https://kde.org/plasma-desktop/) settings so you don't need to install it if you install [KDE](https://kde.org/plasma-desktop/) config files too.
 
-I'm also including the [colorscheme](TokyoNight.colors) and [icons](TokyoNight-SE.tar.bz2) in case you want to use them on your own [Plasma](https://kde.org/plasma-desktop/) configs without needing to extract them from mine.
+I'm also including the [colorscheme](TokyoNight.colors) in case you want to use it on your own [Plasma](https://kde.org/plasma-desktop/) configs without needing to extract it from mine.
 
 ## Installation
 
@@ -44,7 +44,7 @@ Each dotfiles come with special files that are ignored by this repository to all
 
 It is very useful to have specific aliases on different machines and there is no use keeping everything here on this repository.
 
-After installing [zsh](https://wiki.archlinux.org/title/zsh) dotfiles, a `.zshrc_append` file will be added to your home folder. It is already being sourced by `.zshrc` and is ignored by this repository.
+After installing [zsh](https://wiki.archlinux.org/title/zsh) dotfiles, a `.zshrc_override` file will be added to your home folder. It is already being sourced by `.zshrc` and is ignored by this repository.
 
 ### Neovim
 
