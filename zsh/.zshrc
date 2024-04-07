@@ -7,4 +7,4 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="nvim"
 
-source $HOME/.zshrc_append
+source $HOME/.zshrc_override

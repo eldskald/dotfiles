@@ -11,18 +11,18 @@ do
     then
         ln -s ~/dotfiles/nvim/ ~/.config/nvim
         mkdir ~/.config/nvim/lua/custom
-        cp override.lua.example ~/.config/nvim/lua/custom/override.lua
-        cp lsp-configs.lua.example ~/.config/nvim/lua/custom/lsp-configs.lua
-        cp none-ls-sources.lua.example ~/.config/nvim/lua/custom/none-ls-sources.lua
+        cp override-templates/override.lua.template ~/.config/nvim/lua/custom/override.lua
+        cp override-templates/lsp-configs.lua.template ~/.config/nvim/lua/custom/lsp-configs.lua
+        cp override-templates/none-ls-sources.lua.template ~/.config/nvim/lua/custom/none-ls-sources.lua
     elif [ $x == "alacritty" ]
     then
         ln -s ~/dotfiles/alacritty/ ~/.config/alacritty
-        cp override.toml.example ./alacritty/override.toml
+        cp override-templates/override.toml.template ./alacritty/override.toml
     elif [ $x == "zsh" ]
     then
         ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
         ln -s ~/dotfiles/zsh/eldskald.zsh-theme ~/.oh-my-zsh/custom/themes/eldskald.zsh-theme
-        cp .zshrc_append.example ~/.zshrc_append
+        cp override-templates/.zshrc_override.template ~/.zshrc_override
     elif [ $x == "kde" ]
     then
         konsave -r eldskald
