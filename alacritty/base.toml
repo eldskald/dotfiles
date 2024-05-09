@@ -1,9 +1,6 @@
 [env]
 TERM = "alacritty"
 
-[shell]
-program = "/bin/zsh"
-
 [selection]
 save_to_clipboard = true
 
