@@ -11,29 +11,6 @@ return {
         end,
     },
     {
-        'akinsho/bufferline.nvim',
-        version = '*',
-        config = function()
-            require('bufferline').setup({
-                options = {
-                    indicator = {
-                        icon = '>',
-                        style = 'icon',
-                    },
-                    separator_style = { '|', '|' },
-                    modified_icon = '*',
-                    left_trunc_marker = '<-',
-                    right_trunc_marker = '->',
-                    show_buffer_icons = false,
-                    show_buffer_close_icons = false,
-                    show_close_icon = false,
-                },
-            })
-            vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>')
-            vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>')
-        end,
-    },
-    {
         {
             'goolord/alpha-nvim',
             config = function()
