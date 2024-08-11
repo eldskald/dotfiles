@@ -36,6 +36,8 @@ For everything except [KDE Plasma](https://kde.org/plasma-desktop/), Just run `s
 
 Just do `git pull` on this repository and configs for everything you're using will be updated. You'll have to run the [konsave](https://github.com/Prayag2/konsave) commands to update [KDE Plasma](http://kde.org/plasma-desktop/), the same ones on the installation section.
 
+There is also the script [update.sh](kde/update.sh) to save the [KDE Plasma](https://kde.org/plasma-desktop/) profile and split it into the chunks to be uploadable to github. This is mostly for me, to make it easier for me to update the profile on this repo but you can take that script too.
+
 ## Customizing
 
 Each dotfiles come with special files that are ignored by this repository to allow you to specific changes without preventing you from updating later with a `git pull`.

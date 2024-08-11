@@ -29,5 +29,6 @@ do
         cat ~/dotfiles/kde/x* > ~/dotfiles/kde/eldskald.knsv
         konsave -i ~/dotfiles/kde/eldskald.knsv
         konsave -a eldskald
+        rm ~/dotfiles/kde/eldskald.knsv
     fi
 done
