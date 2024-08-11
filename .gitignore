@@ -1,3 +1,4 @@
 alacritty/override.toml
 nvim/lua/custom
+nvim/lazy-lock.json
 kde/eldskald.knsv
