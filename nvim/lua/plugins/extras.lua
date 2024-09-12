@@ -20,4 +20,5 @@ return {
             require('nvim-ts-autotag').setup()
         end,
     },
+    unpack(require('custom.custom-plugins'))
 }

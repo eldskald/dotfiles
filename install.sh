@@ -14,6 +14,7 @@ do
         cp override-templates/override.lua.template ~/.config/nvim/lua/custom/override.lua
         cp override-templates/lsp-configs.lua.template ~/.config/nvim/lua/custom/lsp-configs.lua
         cp override-templates/none-ls-sources.lua.template ~/.config/nvim/lua/custom/none-ls-sources.lua
+        cp override-templates/custom-plugins.lua.template ~/.config/nvim/lua/custom/custom-plugins.lua
     elif [ $x == "alacritty" ]
     then
         ln -s ~/dotfiles/alacritty/ ~/.config/alacritty

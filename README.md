@@ -52,7 +52,7 @@ After installing [zsh](https://wiki.archlinux.org/title/zsh) dotfiles, a `.zshrc
 
 Every different machine will probably be working on different projects and thus be using its own different set of LSPs, linters and formatters and there is no point in keeping everything configured in this repository.
 
-After installing [neovim](https://neovim.io) dotfiles, the directory `~/.config/nvim/lua/custom` will be created with the files `lsp-configs.lua` and `none-ls-sources.lua` just for that. There is also an `override.lua` file that will be sourced last on `init.lua` for other changes that might be necessary, like options or mappings.
+After installing [neovim](https://neovim.io) dotfiles, the directory `~/.config/nvim/lua/custom` will be created with the files `lsp-configs.lua`, `none-ls-sources.lua`, `override.lua` and `custom-plugins.lua` just for that. The `override.lua` file will be sourced last on `init.lua` for other changes that might be necessary, like options or mappings. The `custom-plugins.lua` file, as the name suggests, is a file for extra plugins you might want to install. Treat it like any file on `lua/plugins`. The other two are for the LSP configuration, sourced on `lua/plugins/lsp.lua` where you can install your LSPs and do the `none-ls` settings.
 
 ### Alacritty
 
