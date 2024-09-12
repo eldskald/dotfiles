@@ -13,11 +13,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('plugins', {
+    install = {
+        colorscheme = { 'tokyonight' },
+    },
     ui = {
         icons = {
             cmd = 'cmd',
             config = 'cfg',
             event = 'ev',
+            favorite = 'fav',
             ft = 'ft',
             init = 'init',
             import = 'import',
@@ -27,6 +31,7 @@ require('lazy').setup('plugins', {
             not_loaded = '-',
             plugin = '',
             runtime = 'run',
+            require = 'req',
             source = 'src',
             start = 'start',
             task = 'task',
