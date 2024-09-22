@@ -16,7 +16,86 @@ return {
         -- Linting and formatting
         { 'nvimtools/none-ls.nvim' },
         -- Diagnostics and quickfix
-        { 'folke/trouble.nvim' },
+        {
+            'folke/trouble.nvim',
+            cmd = 'Trouble',
+            keys = {
+                {
+                    '<leader>xx',
+                    '<cmd>Trouble diagnostics toggle<cr>',
+                    desc = 'Diagnostics (Trouble)',
+                },
+                {
+                    '<leader>xX',
+                    '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
+                    desc = 'Buffer Diagnostics (Trouble)',
+                },
+                {
+                    '<leader>cs',
+                    '<cmd>Trouble symbols toggle focus=false<cr>',
+                    desc = 'Symbols (Trouble)',
+                },
+                {
+                    '<leader>cl',
+                    '<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
+                    desc = 'LSP Definitions / references / ... (Trouble)',
+                },
+                {
+                    '<leader>xL',
+                    '<cmd>Trouble loclist toggle<cr>',
+                    desc = 'Location List (Trouble)',
+                },
+                {
+                    '<leader>xQ',
+                    '<cmd>Trouble qflist toggle<cr>',
+                    desc = 'Quickfix List (Trouble)',
+                },
+            },
+            opts = {
+                icons = {
+                    indent = {
+                        top = '│ ',
+                        middle = '├╴',
+                        last = '└╴',
+                        -- last          = "-╴",
+                        -- last       = "╰╴", -- rounded
+                        fold_open = 'v ',
+                        fold_closed = '> ',
+                        ws = '  ',
+                    },
+                    folder_closed = 'v ',
+                    folder_open = '> ',
+                    kinds = {
+                        Array = 'array',
+                        Boolean = 'bool',
+                        Class = 'class',
+                        Constant = 'constant',
+                        Constructor = 'constructor',
+                        Enum = 'enum',
+                        EnumMember = 'enum_member',
+                        Event = 'event',
+                        Field = 'field',
+                        File = 'file',
+                        Function = 'function',
+                        Interface = 'interface',
+                        Key = 'key',
+                        Method = 'method',
+                        Module = 'module',
+                        Namespace = 'namespace',
+                        Null = 'null',
+                        Number = 'number',
+                        Object = 'object',
+                        Operator = 'operator',
+                        Package = 'package',
+                        Property = 'property',
+                        String = 'string',
+                        Struct = 'struct',
+                        TypeParameter = 'type',
+                        Variable = 'variable',
+                    },
+                },
+            },
+        },
     },
     config = function()
         local lsp = require('lsp-zero').preset({
@@ -108,54 +187,6 @@ return {
         require('null-ls').setup({
             debug = true,
             sources = require('custom.none-ls-sources'),
-        })
-
-        -- Diagnostics
-        vim.keymap.set('n', '<leader>xx', '<cmd>TroubleToggle<cr>')
-        vim.keymap.set(
-            'n',
-            '<leader>xw',
-            '<cmd>TroubleToggle workspace_diagnostics<cr>'
-        )
-        vim.keymap.set(
-            'n',
-            '<leader>xd',
-            '<cmd>TroubleToggle document_diagnostics<cr>'
-        )
-        vim.keymap.set('n', '<leader>xl', '<cmd>TroubleToggle loclist<cr>')
-        vim.keymap.set('n', '<leader>xq', '<cmd>TroubleToggle quickfix<cr>')
-        vim.keymap.set('n', 'gR', '<cmd>TroubleToggle lsp_references<cr>')
-
-        require('trouble').setup({
-            action_keys = {
-                close = 'q',
-                cancel = '<Esc>',
-                refresh = 'r',
-                jump = { '<CR>', '<Tab>' },
-                open_split = { '<C-x>' },
-                open_vsplit = { '<C-v>' },
-                open_tab = { '<C-t>' },
-                jump_close = { 'o' },
-                toggle_mode = 'm',
-                toggle_preview = 'P',
-                hover = 'K',
-                preview = 'p',
-                close_folds = { 'zM', 'zm' },
-                open_folds = { 'zR', 'zr' },
-                toggle_fold = { 'zA', 'za' },
-                previous = 'k',
-                next = 'j',
-            },
-            use_diagnostic_signs = false,
-            icons = false,
-            fold_open = 'v',
-            fold_closed = '>',
-            signs = {
-                error = 'X',
-                warning = '!',
-                hint = '?',
-                information = 'i',
-            },
         })
     end,
 }
