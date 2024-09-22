@@ -21,9 +21,9 @@ do
         cp override-templates/override.toml.template ./alacritty/override.toml
     elif [ $x == "zsh" ]
     then
-        ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
         ln -s ~/dotfiles/zsh/eldskald.zsh-theme ~/.oh-my-zsh/custom/themes/eldskald.zsh-theme
-        cp override-templates/.zshrc_override.template ~/.zshrc_override
+        rm ~/.zshrc
+        cp override-templates/.zshrc.template ~/.zshrc
     elif [ $x == "kde" ]
     then
         konsave -r eldskald

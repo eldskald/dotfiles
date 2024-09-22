@@ -1,4 +1,0 @@
-# Additional scripts you might want to include in your .zshrc that aren't
-# included in the dotfiles repository.
-
-#alias my_alias="some command"

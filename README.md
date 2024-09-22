@@ -44,9 +44,9 @@ Each dotfiles come with special files that are ignored by this repository to all
 
 ### Zsh
 
-It is very useful to have specific aliases on different machines and there is no use keeping everything here on this repository.
+It is very useful to have specific aliases on different machines and there is no use keeping everything here on this repository. It is also very common for tools like nvm, rvm, etc to need add some lines to your `.zshrc` or `.bashrc`.
 
-After installing [zsh](https://wiki.archlinux.org/title/zsh) dotfiles, a `.zshrc_override` file will be added to your home folder. It is already being sourced by `.zshrc` and is ignored by this repository.
+After installing [zsh](https://wiki.archlinux.org/title/zsh) dotfiles, a `.zshrc` file will be added to your home directory. This file isn't on the repository, so you can change it however you want. All it does is source the dotfiles configs, so whenever you pull you it won't affect your changes on `.zshrc` and the new sourced updated configs should work fine.
 
 ### Neovim
 
