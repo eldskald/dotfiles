@@ -3,7 +3,7 @@ local o = vim.opt
 vim.g.mapleader = ' '
 
 -- Utils
-o.mouse = ''
+o.mouse = 'a'
 o.clipboard = 'unnamedplus'
 o.termguicolors = true
 o.guicursor = 'a:blinkon500,i:ver100'
