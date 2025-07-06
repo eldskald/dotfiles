@@ -5,6 +5,7 @@ return {
     config = function()
         local map = vim.keymap
         map.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>')
+        map.set('n', '<leader>fd', '<cmd> Telescope find_dirs <CR>')
         map.set('n', '<leader>fg', '<cmd> Telescope live_grep <CR>')
         map.set('n', '<leader>fr', '<cmd> Telescope oldfiles <CR>')
         map.set('n', '<leader>fb', '<cmd> Telescope buffers <CR>')
@@ -84,5 +85,7 @@ return {
                 },
             },
         })
+
+        require('telescope').load_extension('find_dirs')
     end,
 }

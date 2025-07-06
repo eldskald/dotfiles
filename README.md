@@ -4,7 +4,7 @@
 
 ![](images/ss2.png)
 
-My personal Linux ricing. Configurations for [KDE Plasma 6](https://kde.org/plasma-desktop/), [neovim](https://neovim.io), [alacritty](https://alacritty.org/) and [zsh](https://wiki.archlinux.org/title/zsh). It tries to be very minimal, with no plugins or scripts for [Plasma](https://kde.org/plasma-desktop/) except for a single [colorscheme](TokyoNight.colors). For [neovim](https://neovim.io), there's only [ripgrep](https://github.com/BurntSushi/ripgrep) for [telescope](https://github.com/nvim-telescope/telescope.nvim). For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/) and for [alacritty](https://alacritty.org/), there's a single font already bundled on the [Plasma](https://kde.org/plasma-desktop/) configs.
+My personal Linux ricing. Configurations for [KDE Plasma 6](https://kde.org/plasma-desktop/), [neovim](https://neovim.io), [alacritty](https://alacritty.org/) and [zsh](https://wiki.archlinux.org/title/zsh). It tries to be very minimal, with no plugins or scripts for [Plasma](https://kde.org/plasma-desktop/) except for a single [colorscheme](TokyoNight.colors). For [neovim](https://neovim.io), there's [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd) for [telescope](https://github.com/nvim-telescope/telescope.nvim). For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/) and for [alacritty](https://alacritty.org/), there's a single font already bundled on the [Plasma](https://kde.org/plasma-desktop/) configs, but you can install it through `pacman` with `sudo pacman -S otf-hermit-nerd`.
 
 The colorscheme is a slightly modified version from [this one](https://github.com/Jayy-Dev/Plasma-Tokyo-Night/blob/plasma-6/colorscheme/TokyoNight.colors), just making the window title bars the same color as the usual background so it blends in with the terminal background and other apps.
 
@@ -14,7 +14,7 @@ Yes, this whole repository is just Tokyo Night, the DE. If you don't know the To
 
 For [KDE Plasma](https://kde.org/plasma-desktop/), you need [konsave](https://github.com/Prayag2/konsave) just to install the dotfiles, you can remove it afterwards.
 
-For [neovim](https://neovim.io), you need [ripgrep](https://github.com/BurntSushi/ripgrep).
+For [neovim](https://neovim.io), you need [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd).
 
 For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/).
 
@@ -26,7 +26,7 @@ I'm also including the [colorscheme](TokyoNight.colors) in case you want to use 
 
 First, clone or download this repository into your home directory. It must be on the home directory. Don't forget to have all the dependencies for the dotfiles you'll install ready before doing that.
 
-To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh kde`. __NOTE:__ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plasma](https://kde.org/plasma-deskotp/), install the [HurmitNerdFont](Hermit.zip) on your system.
+To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh kde`. __NOTE:__ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plasma](https://kde.org/plasma-deskotp/), install the [HurmitNerdFont](Hermit.zip) on your system (can be installed with `sudo pacman -S otf-hermit-nerd` if on Arch, but the file is here in case you're in another distro).
 
 ## Uninstalling
 
