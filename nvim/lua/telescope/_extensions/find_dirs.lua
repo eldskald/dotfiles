@@ -13,7 +13,7 @@ local find_dirs = function(opts)
             previewer = previewers.new_termopen_previewer({
                 title = 'Directory Preview',
                 get_command = function(entry, _)
-                    return { 'ls', '-1', entry.value }
+                    return { 'ls', '-1', '-a', entry.value }
                 end,
             }),
         })
