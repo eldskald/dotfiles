@@ -11,7 +11,11 @@ return {
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'hrsh7th/cmp-nvim-lua' },
         -- Snippets
-        { 'L3MON4D3/LuaSnip' },
+        {
+            'L3MON4D3/LuaSnip',
+            tag = 'v2.4.0',
+            build = "make install_jsregexp",
+        },
         { 'rafamadriz/friendly-snippets' },
         -- Linting and formatting
         { 'nvimtools/none-ls.nvim' },

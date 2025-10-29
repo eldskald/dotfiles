@@ -3,8 +3,11 @@
 -- on every machine, it's better to do it this way.
 -- This file is ignored by the repository.
 
--- Configs for lua
--- require('lspconfig').lua_ls.setup({
+-- local enable = vim.lsp.enable
+-- local config = vim.lsp.config
+-- 
+-- -- Configs for lua
+-- config('lua_ls', {
 --     settings = {
 --         Lua = {
 --             runtime = {
@@ -23,13 +26,15 @@
 --         },
 --     },
 -- })
-
--- Configs for HTML/CSS/JavaScript/TypeScript as well as tailwindcss
--- require('lspconfig').ts_ls.setup({})
--- require('lspconfig').html.setup({})
--- require('lspconfig').cssls.setup({})
--- require('lspconfig').tailwindcss.setup({})
--- require('lspconfig').eslint.setup({})
-
--- Configs for GDScript
--- require('lspconfig').gdscript.setup({})
+-- enable('lua_ls')
+-- 
+-- -- Configs for C and C++
+-- enable('clangd')
+-- 
+-- -- Configs for HTML/CSS/JavaScript/TypeScript as well as tailwindcss
+-- enable('ts_ls')
+-- enable('html')
+-- enable('cssls')
+-- enable('jsonls')
+-- enable('eslint')
+-- enable('tailwindcss')
