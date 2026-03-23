@@ -14,7 +14,7 @@ Yes, this whole repository is just Tokyo Night, the DE. If you don't know the To
 
 For [KDE Plasma](https://kde.org/plasma-desktop/), you need [konsave](https://github.com/Prayag2/konsave) just to install the dotfiles, you can remove it afterwards.
 
-For [neovim](https://neovim.io), you need [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd).
+For [neovim](https://neovim.io), you need [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd). You should also have [wl-clipboard](https://github.com/bugaevc/wl-clipboard) for clipboard integration.
 
 For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/).
 
