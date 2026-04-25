@@ -1,7 +1,10 @@
 return {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.4',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    version = '*',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
     config = function()
         local map = vim.keymap
         map.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>')

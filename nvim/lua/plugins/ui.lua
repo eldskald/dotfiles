@@ -1,58 +1,18 @@
 return {
     {
-        'lukas-reineke/indent-blankline.nvim',
-        main = 'ibl',
+        'catgoose/nvim-colorizer.lua',
+        event = 'BufReadPre',
         opts = {},
-    },
-    {
-        'norcalli/nvim-colorizer.lua',
         config = function()
-            require('colorizer').setup()
-        end,
-    },
-    {
-        {
-            'goolord/alpha-nvim',
-            config = function()
-                local alpha = require('alpha')
-                local dashboard = require('alpha.themes.dashboard')
-                local v = vim.version()
-                local dashboard_art = {
-                    [[                                                   ]],
-                    [[                                              ___  ]],
-                    [[                                           ,o88888 ]],
-                    [[                                        ,o8888888' ]],
-                    [[                  ,:o:o:oooo.        ,8O88Pd8888"  ]],
-                    [[              ,.::.::o:ooooOoOoO. ,oO8O8Pd888'"    ]],
-                    [[            ,.:.::o:ooOoOoOO8O8OOo.8OOPd8O8O"      ]],
-                    [[           , ..:.::o:ooOoOOOO8OOOOo.FdO8O8"        ]],
-                    [[          , ..:.::o:ooOoOO8O888O8O,COCOO"          ]],
-                    [[         , . ..:.::o:ooOoOOOO8OOOOCOCO"            ]],
-                    [[          . ..:.::o:ooOoOoOO8O8OCCCC"o             ]],
-                    [[             . ..:.::o:ooooOoCoCCC"o:o             ]],
-                    [[             . ..:.::o:o:,cooooCo"oo:o:            ]],
-                    [[          `   . . ..:.:cocoooo"'o:o:::'            ]],
-                    [[          .`   . ..::ccccoc"'o:o:o:::'             ]],
-                    [[         :.:.    ,c:cccc"':.:.:.:.:.'              ]],
-                    [[       ..:.:"'`::::c:"'..:.:.:.:.:.'               ]],
-                    [[     ...:.'.:.::::"'    . . . . .'                 ]],
-                    [[    .. . ....:."' `   .  . . ''                    ]],
-                    [[  . . . ...."'                                     ]],
-                    [[  .. . ."'                                         ]],
-                    [[ .                                                 ]],
-                    [[                                                   ]],
-                }
-                local nvim_version = v.major .. '.' .. v.minor .. '.' .. v.patch
-                local spaces_total = (string.len(dashboard_art[1]) - 13) / 2
-                local nvim_centralized = string.rep(' ', spaces_total)
-                    .. 'NEOVIM v'
-                    .. nvim_version
-                table.insert(dashboard_art, nvim_centralized)
-                dashboard.section.header.val = dashboard_art
-                dashboard.section.buttons.val = {}
-                alpha.setup(dashboard.config)
-            end,
-        },
+            require('colorizer').setup({
+                options = {
+                    parsers = {
+                        names = { enable = false },
+                        tailwind = { enable = true },
+                    },
+                },
+            })
+        end
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -62,20 +22,20 @@ return {
             -- modded by eldskald
             local lualine = require('lualine')
 
-      -- stylua: ignore
-      local colors = {
-        bg       = '#202328',
-        fg       = '#bbc2cf',
-        yellow   = '#ECBE7B',
-        cyan     = '#008080',
-        darkblue = '#081633',
-        green    = '#98be65',
-        orange   = '#FF8800',
-        violet   = '#a9a1e1',
-        magenta  = '#c678dd',
-        blue     = '#51afef',
-        red      = '#ec5f67',
-      }
+            -- stylua: ignore
+            local colors = {
+                bg       = '#202328',
+                fg       = '#BBC2CF',
+                yellow   = '#ECBE7B',
+                cyan     = '#008080',
+                darkblue = '#081633',
+                green    = '#98BE65',
+                orange   = '#FF8800',
+                violet   = '#A9A1E1',
+                magenta  = '#C678DD',
+                blue     = '#51AFEF',
+                red      = '#EC5F67',
+            }
 
             local conditions = {
                 buffer_not_empty = function()
@@ -225,5 +185,61 @@ return {
 
             lualine.setup(config)
         end,
+    },
+    {
+        'folke/snacks.nvim',
+        lazy = false,
+        opts = {
+            scroll = { enabled = true },
+            indent = {
+                enabled = true,
+                animate = { enabled = false },
+            },
+            dashboard = {
+                enabled = true,
+                row = nil, -- dashboard position. nil for center
+                col = nil, -- dashboard position. nil for center
+                preset = {
+                    header = (function()
+                        local v = vim.version()
+                        local dashboard_art = {
+                            [[                                                   ]],
+                            [[                                              ___  ]],
+                            [[                                           ,o88888 ]],
+                            [[                                        ,o8888888' ]],
+                            [[                  ,:o:o:oooo.        ,8O88Pd8888"  ]],
+                            [[              ,.::.::o:ooooOoOoO. ,oO8O8Pd888'"    ]],
+                            [[            ,.:.::o:ooOoOoOO8O8OOo.8OOPd8O8O"      ]],
+                            [[           , ..:.::o:ooOoOOOO8OOOOo.FdO8O8"        ]],
+                            [[          , ..:.::o:ooOoOO8O888O8O,COCOO"          ]],
+                            [[         , . ..:.::o:ooOoOOOO8OOOOCOCO"            ]],
+                            [[          . ..:.::o:ooOoOoOO8O8OCCCC"o             ]],
+                            [[             . ..:.::o:ooooOoCoCCC"o:o             ]],
+                            [[             . ..:.::o:o:,cooooCo"oo:o:            ]],
+                            [[          `   . . ..:.:cocoooo"'o:o:::'            ]],
+                            [[          .`   . ..::ccccoc"'o:o:o:::'             ]],
+                            [[         :.:.    ,c:cccc"':.:.:.:.:.'              ]],
+                            [[       ..:.:"'`::::c:"'..:.:.:.:.:.'               ]],
+                            [[     ...:.'.:.::::"'    . . . . .'                 ]],
+                            [[    .. . ....:."' `   .  . . ''                    ]],
+                            [[  . . . ...."'                                     ]],
+                            [[  .. . ."'                                         ]],
+                            [[ .                                                 ]],
+                            [[                                                   ]],
+                        }
+                        local nvim_version = v.major
+                            .. '.'
+                            .. v.minor
+                            .. '.'
+                            .. v.patch
+                        table.insert(dashboard_art, 'NEOVIM v' .. nvim_version)
+                        return table.concat(dashboard_art, '\n')
+                    end)(),
+                },
+                sections = {
+                    { section = 'header' },
+                },
+            },
+        },
     },
 }
