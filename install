@@ -1,0 +1,55 @@
+#!/bin/bash
+
+if [ $# == 0 ]
+then
+    ./install neovim alacritty zsh destkop
+fi
+
+for x in $@
+do
+    if [ $x == "neovim" ]
+    then
+        rm -rf ~/.config/nvim
+        ln -s ~/dotfiles/nvim/ ~/.config/nvim
+        mkdir ~/.config/nvim/lua/custom
+        cp override-templates/override.lua.template ~/.config/nvim/lua/custom/override.lua
+        cp override-templates/lsp-configs.lua.template ~/.config/nvim/lua/custom/lsp-configs.lua
+        cp override-templates/none-ls-sources.lua.template ~/.config/nvim/lua/custom/none-ls-sources.lua
+        cp override-templates/custom-plugins.lua.template ~/.config/nvim/lua/custom/custom-plugins.lua
+    elif [ $x == "alacritty" ]
+    then
+        rm -rf ~/.config/alacritty
+        ln -s ~/dotfiles/alacritty/ ~/.config/alacritty
+        cp override-templates/override.toml.template ./alacritty/override.toml
+    elif [ $x == "zsh" ]
+    then
+        rm ~/.zshrc
+        cp ~/dotfiles/zsh/.zshrc ~/.zshrc
+    elif [ $x == "desktop" ]
+    then
+        rm -rf ~/.config/hypr
+        rm -rf ~/.config/noctalia
+        rm -rf ~/.config/gtk-3.0
+        rm -rf ~/.config/gtk-4.0
+        rm -rf ~/.config/xdg-desktop-portal
+        rm -rf ~/.config/user-dirs.dirs
+        rm -rf ~/.config/user-dirs.locale
+        ln -s ~/dotfiles/desktop/hypr/ ~/.config/hypr
+        ln -s ~/dotfiles/desktop/noctalia/ ~/.config/noctalia
+        ln -s ~/dotfiles/desktop/gtk-3.0/ ~/.config/gtk-3.0
+        ln -s ~/dotfiles/desktop/gtk-4.0/ ~/.config/gtk-4.0
+        ln -s ~/dotfiles/desktop/xdg-desktop-portal/ ~/.config/xdg-desktop-portal
+        ln -s ~/dotfiles/desktop/user-dirs.dirs ~/.config/user-dirs.dirs
+        ln -s ~/dotfiles/desktop/user-dirs.locale ~/.config/user-dirs.locale
+        cp ~/dotfiles/.XCompose ~/.XCompose
+        cp ~/dotfiles/desktop/mimeapps.list ~/.config/
+        cp ~/dotfiles/desktop/kdeglobals ~/.config/
+        cp ~/dotfiles/desktop/dolphinrc ~/.config/
+        cp ~/dotfiles/desktop/kwriterc ~/.config/
+        cp ~/dotfiles/desktop/katerc ~/.config/
+        cp -r ~/dotfiles/desktop/haruna/ ~/.config/
+        mkdir ~/.config/hypr/custom
+        cp override-templates/custom.conf.template ~/.config/hypr/custom/custom.conf
+        ln -s ~/dotfiles/wallpapers/ ~/wallpapers
+    fi
+done

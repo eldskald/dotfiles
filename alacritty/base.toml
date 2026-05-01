@@ -7,7 +7,7 @@ multiplier = 3
 
 [window]
 decorations = "full"
-opacity = 1.0
+opacity = 0.9
 
 [window.padding]
 x = 4

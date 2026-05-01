@@ -4,69 +4,174 @@
 
 ![](images/ss2.png)
 
-My personal Linux ricing. Configurations for [KDE Plasma 6](https://kde.org/plasma-desktop/), [neovim](https://neovim.io), [alacritty](https://alacritty.org/) and [zsh](https://wiki.archlinux.org/title/zsh). It tries to be very minimal, with no plugins or scripts for [Plasma](https://kde.org/plasma-desktop/) except for a single [colorscheme](TokyoNight.colors). For [neovim](https://neovim.io), there's [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd) for [telescope](https://github.com/nvim-telescope/telescope.nvim). For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/) and for [alacritty](https://alacritty.org/), there's a single font already bundled on the [Plasma](https://kde.org/plasma-desktop/) configs, but you can install it through `pacman` with `sudo pacman -S otf-hermit-nerd`.
+My personal Linux ricing. I'm using Hyprland for the compositor, Noctalia for the shell and Qt apps like dolphin, kate, etc for the apps, with the Tokyo Night colorscheme everywhere. There are also configs for Zsh, Neovim and Alacritty, but all four are independent of one another, although they do work well together. It is made for Arch, but might work in other distros if you can find all the packages to install.
 
-The colorscheme is a slightly modified version from [this one](https://github.com/Jayy-Dev/Plasma-Tokyo-Night/blob/plasma-6/colorscheme/TokyoNight.colors), just making the window title bars the same color as the usual background so it blends in with the terminal background and other apps.
-
-Yes, this whole repository is just Tokyo Night, the DE. If you don't know the Tokyo Night theme, it's [this](https://github.com/folke/tokyonight.nvim) popular [neovim](https://neovim.io) theme. This repository has ports of this theme to many other popular open source software, including [alacritty](https://alacritty.org/) which is included here.
-
-## Dependencies
-
-For [KDE Plasma](https://kde.org/plasma-desktop/), you need [konsave](https://github.com/Prayag2/konsave) just to install the dotfiles, you can remove it afterwards.
-
-For [neovim](https://neovim.io), you need [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd). You should also have [wl-clipboard](https://github.com/bugaevc/wl-clipboard) for clipboard integration.
-
-For [zsh](https://wiki.archlinux.org/title/zsh), you need [oh-my-zsh](https://ohmyz.sh/).
-
-For [alacritty](https://alacritty.org/), you need the [HurmitNerdFont](Hermit.zip), but it already comes on the [KDE Plasma](https://kde.org/plasma-desktop/) settings so you don't need to install it if you install [KDE](https://kde.org/plasma-desktop/) config files too.
-
-I'm also including the [colorscheme](TokyoNight.colors) in case you want to use it on your own [Plasma](https://kde.org/plasma-desktop/) configs without needing to extract it from mine.
+There are also some extra stuff that can be configured, like KDE Plasma Tokyo Night colorscheme along with custom keybindings and panels with widgets, as well as a Tokyo Night colorscheme for Godot and bat.
 
 ## Installation
 
-First, clone or download this repository into your home directory. It must be on the home directory. Don't forget to have all the dependencies for the dotfiles you'll install ready before doing that.
+> [!CAUTION]
+> The script deletes current config files for whatever you're installing, so make a backups if you have to!
 
-To install, run the `install.sh` script in this repository. You can also append `kde`, `neovim`, `zsh` or `alacritty` to `sh install.sh` to install just the configurations for said tool, for example running `sh install.sh neovim` will just install the [neovim](https://neovim.io) configurations. You can install two too by doing `sh install.sh neovim alacritty`, for example. Running `sh install.sh` is the same as `sh install neovim alacritty zsh kde`. __NOTE:__ If you are installing [alacritty](https://alacritty.org/) but are not using [KDE Plasma](https://kde.org/plasma-deskotp/), install the [HurmitNerdFont](Hermit.zip) on your system (can be installed with `sudo pacman -S otf-hermit-nerd` if on Arch, but the file is here in case you're in another distro).
+> [!IMPORTANT]
+> Some of these have dependencies you need to install first, especially the desktop. Read the next sessions for more info on each.
+
+First, download or clone this repo in your home directory. **It must be on the home directory otherwise it won't work!** Then, run the install script with the following arguments, depending on what you're installing but before doing so, make sure you have all the dependencies ready, especially for the desktop.
+
+```bash
+./install neovim            # Run this for neovim
+./install zsh               # Run this for zsh
+./install alacritty         # Run this for alacritty
+./install destkop           # Run this for the desktop environment
+./install                   # Run this for all of the above
+
+./install neovim destkop    # Run this for both the desktop environment and neovim,
+                            # you can add more of the above args to pick and choose
+```
+
+### Instructions for Neovim
+
+You need `ripgrep` and `fd`. Having `wl-clipboard` if you're on Wayland might be important too if you want Neovim to share the system clipboard.
+
+```
+sudo pacman -S neovim ripgrep fd
+./install neovim
+```
+
+### Instructions for Zsh
+
+No dependencies.
+
+```
+sudo pacman -S zsh
+./install zsh
+```
+
+### Instructions for Alacritty
+
+You need the Hurmit Nerd Font. You can install it from the `nerd-fonts` package along with all other Nerd Fonts or only it directly by installing the `otf-hermit-nerd` package.
+
+```
+sudo pacman -S alacritty otf-hermit-nerd
+./install alacritty
+```
+
+### Instructions for the desktop environment
+
+You need the following packages installed. These names are based on Arch's repository, as well as AUR, so if you're installing on a different distro some of these packages might have a different name.
+
+```
+yay -S networkmanager pipewire wireplumber pipewire-alsa noto-fonts hyprland hyprpolkitagent hyprqt6engine xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde archlinux-xdg-menu noctalia-shell cliphist wlsunset nwg-look qt5-wayland qt6-wayland adw-gtk-theme xcursor-simp1e-tokyo-night-light udiskie wl-clipboard grim slurp breeze dolphin ark kate gwenview okular haruna kolourpaint kcalc partitionmanager isoimagewriter hyprsysteminfo ksysguard6-git pavucontrol-qt sddm sddm-silent-theme
+```
+
+After that, run this so GTK apps get properly themed.
+
+```
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
+```
+
+You might also want to install and enable bluetooth:
+
+```
+sudo pacman -S bluez bluez-utils
+sudo systemctl enable bluetooth
+```
+
+You also need to run this (with `sudo` so watch it) in order for `dolphin` to correctly open files with the default apps. This is an Arch thing, so you should skip it if you're not on Arch and maybe run something equivalent if `dolphin` can't access `mimeapps.list`.
+
+```
+sudo ln -sf /etc/xdg/menus/arch-applications.menu /etc/xdg/menus/applications.menu && kbuildsycoca6 --noincremental
+```
+
+With all of that out of the way, you can run the install script. It will create symlinks of the config files here to the correct paths in the your system they need to be, as well as delete the current files they're replacing so, once again, MAKE BACKUPS. Lastly, don't forget these dotfiles repo need to be on your home, like `~/dotfiles/` otherwise it will fail.
+
+```
+./install desktop
+```
+
+This installation has no terminal emulator included, plus that PC might require additional setup, like monitors, Nvidia and additional window rules and keybindings. Put them on `.config/hypr/custom`.
+
+This setup also doesn't include a terminal emulator, you can install the Alacritty configs if you want. Whichever you pick, you need to set it as your default terminal for `dolphin` to open it. You can do it by adding the following lines on `~/.config/kdeglobals`:
+
+```
+[General]
+TerminalApplication=<terminal-command-here>
+```
+
+Now, we need to setup SDDM. Let's start with the cursor. Edit the `/usr/share/icons/default/index.theme` file with the following contents:
+
+```
+[Icon Theme]
+Inherits=Simp1e-Tokyo-Night-Light
+Size=24
+```
+
+Create the `/etc/sddm.conf` with the following contents:
+
+```
+[General]
+InputMethod=qtvirtualkeyboard
+GreeterEnvironment=QML2_IMPORT_PATH=/usr/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard
+
+[Theme]
+Current=silent
+```
+
+Lastly, take one of the wallpapers and copy it into `/usr/share/sddm/themes/silent/backgrounds/` and edit `/usr/share/sddm/themes/silent/configs/default.conf` to replace all `"smoky.jpg"` instances with the copied background.
 
 ## Uninstalling
 
-For everything except [KDE Plasma](https://kde.org/plasma-desktop/), Just run `sh uninstall.sh`. And just like the install script, you can also append `neovim`, `zsh` or `alacritty` to uninstall just the configs for said software, but doesn't work for [KDE](https://kde.org/plasma-desktop/). See [konsave](https://github.com/Prayag2/konsave) for how to backup your own config before applying these.
+Just run `./uninstall`. And just like the install script, you can also append `neovim`, `zsh`, `alacritty` or `desktop` to uninstall just the configs for said software.
 
 ## Updating
 
-Just do `git pull` on this repository and configs for everything you're using will be updated. You'll have to run the [konsave](https://github.com/Prayag2/konsave) commands to update [KDE Plasma](http://kde.org/plasma-desktop/), the same ones on the installation section.
-
-There is also the script [update.sh](kde/update.sh) to save the [KDE Plasma](https://kde.org/plasma-desktop/) profile and split it into the chunks to be uploadable to github. This is mostly for me, to make it easier for me to update the profile on this repo but you can take that script too.
+Just do `git pull` on this repository and configs for everything you're using will be updated.
 
 ## Customizing
 
-Each dotfiles come with special files that are ignored by this repository to allow you to specific changes without preventing you from updating later with a `git pull`.
+Each dotfiles comes with special files that are ignored by this repository to allow you to specific changes without preventing you from updating later with a `git pull`.
 
 ### Zsh
 
 It is very useful to have specific aliases on different machines and there is no use keeping everything here on this repository. It is also very common for tools like nvm, rvm, etc to need add some lines to your `.zshrc` or `.bashrc`.
 
-After installing [zsh](https://wiki.archlinux.org/title/zsh) dotfiles, a `.zshrc` file will be added to your home directory. This file isn't on the repository, so you can change it however you want. All it does is source the dotfiles configs, so whenever you pull you it won't affect your changes on `.zshrc` and the new sourced updated configs should work fine.
+After installing Zsh dotfiles, a `.zshrc` file will be added to your home directory. This file isn't on the repository, so you can change it however you want. All it does is source the dotfiles configs, so whenever you pull you it won't affect your changes on `.zshrc` and the new sourced updated configs should work fine.
 
 ### Neovim
 
 Every different machine will probably be working on different projects and thus be using its own different set of LSPs, linters and formatters and there is no point in keeping everything configured in this repository.
 
-After installing [neovim](https://neovim.io) dotfiles, the directory `~/.config/nvim/lua/custom` will be created with the files `lsp-configs.lua`, `none-ls-sources.lua`, `override.lua` and `custom-plugins.lua` just for that. The `override.lua` file will be sourced last on `init.lua` for other changes that might be necessary, like options or mappings. The `custom-plugins.lua` file, as the name suggests, is a file for extra plugins you might want to install. Treat it like any file on `lua/plugins`. The other two are for the LSP configuration, sourced on `lua/plugins/lsp.lua` where you can install your LSPs and do the `none-ls` settings.
+After installing Neovim dotfiles, the directory `~/.config/nvim/lua/custom` will be created with the files `lsp-configs.lua`, `none-ls-sources.lua`, `override.lua` and `custom-plugins.lua` just for that. The `override.lua` file will be sourced last on `init.lua` for other changes that might be necessary, like options or mappings. The `custom-plugins.lua` file, as the name suggests, is a file for extra plugins you might want to install. Treat it like any file on `lua/plugins`. The other two are for the LSP configuration, sourced on `lua/plugins/lsp.lua` where you can install your LSPs and do the `none-ls` settings.
 
 ### Alacritty
 
 After installing the dotfiles, a `override.toml` file will be added to `~/.config/alacritty/` to change anything, like window opacity, mappings or font.
 
-### KDE Plasma
+### The desktop environment
 
-These are not in this repository, so you can mess around and change your settings without git seeing anything. You can run `konsave -a eldskald` to re-apply them back, or just `sh install.sh kde` should work too.
+After installing the dotfiles, a `custom.conf` file will be added to `~/.config/hypr/custom/` to add or override any one of the configs. Use to setup monitors on your different machine, integrate your terminal emulator, etc.
+
+The rest aren't really customizable yet, with some exceptions. The install script symlinks some files and just copies others. The ones that are not symlinked will not affect this repo, and thus will not be updated on a `git pull`, unlike the symlinked ones. The symlinked ones are Noctalia and the GTK folders, while the Qt apps rc files will be copied.
 
 ## Extras
 
+### KDE Plasma
+
+Run the following:
+
+```
+cp ~/dotfiles/extras/plasma/kglobalshortcutsrc ~/.config/
+cp ~/dotfiles/extras/plasma/kxkbrc ~/.config/
+cp ~/dotfiles/extras/plasma/plasmashellrc ~/.config/
+cp ~/dotfiles/extras/plasma/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
+cp ~/dotfiles/.XCompose ~/
+```
+
+After that, use the [TokyoNight.colors](TokyoNight.colors) file on the Settings to import a colorscheme and set it with Breeze. You can also set `~/dotfiles/wallpapers/` as the wallpapers directory for slideshow mode, with 15 minutes to between wallpapers.
+
 ### Godot Engine
 
-There's a [Godot](https://godotengine.org/) editor saved theme and layout, just put the files in [extras/godot](extras/godot) at `~/.config/godot`. It's basically Tokyo Night Godot, as well as my own personal layout.
+There's a Godot Game Engine editor saved theme and layout, just put the files in [extras/godot](extras/godot) at `~/.config/godot`. It's basically Tokyo Night Godot, as well as my own personal layout.
 
 ### bat
 
