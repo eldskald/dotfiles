@@ -128,7 +128,7 @@
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
-                    "maxWidth": 560,
+                    "maxWidth": 530,
                     "panelShowAlbumArt": true,
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
@@ -201,13 +201,13 @@
                     "showPowerProfiles": false
                 },
                 {
+                    "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "secondary",
                     "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": true,
                     "icon": "noctalia",
-                    "iconColor": "none",
-                    "id": "Launcher",
+                    "id": "ControlCenter",
                     "useDistroLogo": true
                 }
             ]
@@ -294,10 +294,10 @@
             "right": [
                 {
                     "enableOnStateLogic": false,
-                    "generalTooltipText": "Home directory",
-                    "icon": "folders",
+                    "generalTooltipText": "Launcher",
+                    "icon": "rocket",
                     "id": "CustomButton",
-                    "onClicked": "dolphin",
+                    "onClicked": "qs -c noctalia-shell ipc call launcher toggle",
                     "onMiddleClicked": "",
                     "onRightClicked": "",
                     "showExecTooltip": false,
@@ -305,10 +305,10 @@
                 },
                 {
                     "enableOnStateLogic": false,
-                    "generalTooltipText": "Audio controls",
-                    "icon": "device-speaker",
+                    "generalTooltipText": "Home directory",
+                    "icon": "folders",
                     "id": "CustomButton",
-                    "onClicked": "pavucontrol-qt",
+                    "onClicked": "dolphin",
                     "onMiddleClicked": "",
                     "onRightClicked": "",
                     "showExecTooltip": false,
