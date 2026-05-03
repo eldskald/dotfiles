@@ -1,0 +1,19 @@
+[Added Associations]
+application/pdf=okular.desktop;
+audio/vnd.wave=org.kde.haruna.desktop;
+audio/x-vorbis+ogg=org.kde.haruna.desktop;
+image/gif=gwenview-3.desktop;
+image/jpeg=gwenview-6.desktop;gwenview-5.desktop;gwenview-4.desktop;
+image/png=gwenview-2.desktop;gwenview.desktop;
+text/plain=kwrite-2.desktop;kwrite.desktop;
+video/mp4=haruna.desktop;
+
+[Default Applications]
+application/pdf=okular.desktop;
+audio/vnd.wave=org.kde.haruna.desktop;
+audio/x-vorbis+ogg=org.kde.haruna.desktop;
+image/gif=gwenview-4.desktop;
+image/jpeg=gwenview-6.desktop;
+image/png=gwenview-2.desktop;
+text/plain=kwrite-2.desktop;
+video/mp4=haruna.destkop;

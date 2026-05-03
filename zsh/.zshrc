@@ -1,10 +1,8 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="eldskald"
+# This first line the one that sets the settings on the repository, do not
+# remove it
+source $HOME/dotfiles/zsh/configs.zsh
 
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-export EDITOR="nvim"
-
-source $HOME/.zshrc_override
+# You can add anything you want to this file, it's not symlinked to the
+# dotfiles repository
+# export SOME_VAR=some_value
+# alias my_alias="some command"

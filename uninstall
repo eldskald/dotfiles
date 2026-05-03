@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ $# == 0 ]
+then
+    ./uninstall neovim alacritty zsh desktop
+fi
+
+for x in $@
+do
+    if [ $x == "neovim" ]
+    then
+        rm ~/.config/nvim
+        rm -r ~/dotfiles/nvim/lua/custom
+    elif [ $x == "alacritty" ]
+    then
+        rm ~/.config/alacritty
+        rm ~/dotfiles/alacritty/override.toml
+    elif [ $x == "zsh" ]
+    then
+        rm ~/.zshrc
+        rm ~/.oh-my-zsh/custom/themes/eldskald.zsh-theme
+    elif [ $x == "desktop" ]
+    then
+        rm ~/.config/hypr
+        rm ~/.config/noctalia
+        rm -rf ~/.config/gtk-3.0
+        rm -rf ~/.config/gtk-4.0
+        rm -rf ~/.config/xdg-desktop-portal
+        rm -r ~/dotfiles/desktop/hypr/custom
+        rm -rf ~/wallpapers
+    fi
+done

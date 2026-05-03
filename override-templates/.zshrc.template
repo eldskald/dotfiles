@@ -1,5 +1,5 @@
 # This first line the one that sets the settings on ~/dotfiles/zsh
-source $HOME/dotfiles/zsh/configs.sh
+source $HOME/dotfiles/zsh/configs.zsh
 
 # You can add anything you want to this file, it's not included in the
 # dotfiles repository

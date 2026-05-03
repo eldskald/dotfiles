@@ -2,4 +2,4 @@
 # Configs in this file will override the base ones and are ignored by git.
 
 #[window]
-#opacity = 0.9
+#opacity = 1.0
