@@ -3,3 +3,4 @@ nvim/lua/custom
 nvim/lazy-lock.json
 kde/eldskald.knsv
 desktop/hypr/custom
+**/.directory
