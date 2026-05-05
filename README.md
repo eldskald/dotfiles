@@ -8,7 +8,7 @@
 
 My personal Linux ricing. I'm using Hyprland for the compositor, Noctalia for the shell and Qt apps like dolphin, kate, etc for the apps, with the Tokyo Night colorscheme everywhere. There are also configs for Zsh, Neovim and Alacritty, but all four are independent of one another, although they do work well together. It is made for Arch, but might work in other distros if you can find all the packages to install.
 
-There are also some extra stuff that can be configured, like KDE Plasma Tokyo Night colorscheme along with custom keybindings and panels with widgets, as well as a Tokyo Night colorscheme for Godot and bat.
+There are also some extra stuff that can be configured, like KDE Plasma Tokyo Night colorscheme along with custom keybindings and panels with widgets, a Tokyo Night colorscheme for Godot and bat, and instructions for a cool Firefox setup that matches the desktop.
 
 ## Installation
 
