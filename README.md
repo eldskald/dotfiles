@@ -178,3 +178,7 @@ There's a Godot Game Engine editor saved theme and layout, just put the files in
 ### bat
 
 There's a Tokyo Night theme [bat](https://github.com/sharkdp/bat), just read [this section](https://github.com/sharkdp/bat#adding-new-themes) on how to add themes after downloading [extras/bat/tokyonight_night.tmTheme](extras/bat/tokyonight_night.tmTheme).
+
+### Firefox
+
+No files contained here, but for a Tokyo Night themed Firefox, use [this theme](https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-milav/). If you're on the desktop configs contained here, might as well install [FF-ULTIMA](https://github.com/soulhotel/FF-ULTIMA) as well and set `ultima.disable.windowcontrols.button = false`, `ultima.navbar.hide.buttons = false`, `ultima.tabs.tabCounter = false` and `ultima.urlbar.centered = false`.
