@@ -24,17 +24,14 @@ return {
 
             -- stylua: ignore
             local colors = {
-                bg       = '#202328',
-                fg       = '#BBC2CF',
-                yellow   = '#ECBE7B',
-                cyan     = '#008080',
-                darkblue = '#081633',
-                green    = '#98BE65',
-                orange   = '#FF8800',
-                violet   = '#A9A1E1',
-                magenta  = '#C678DD',
-                blue     = '#51AFEF',
-                red      = '#EC5F67',
+                bg       = '#292e42',
+                fg       = '#c0caf5',
+                teal     = '#1abc9c',
+                green    = '#9ece6a',
+                orange   = '#ff9e64',
+                magenta  = '#bb9af7',
+                blue     = '#7aa2f7',
+                red      = '#f7768e',
             }
 
             local conditions = {
@@ -90,7 +87,7 @@ return {
                 function()
                     return '▊'
                 end,
-                color = { fg = colors.cyan },
+                color = { fg = colors.teal },
                 padding = { left = 0, right = 1 },
             })
 
@@ -179,7 +176,7 @@ return {
                 function()
                     return '▊'
                 end,
-                color = { fg = colors.cyan },
+                color = { fg = colors.teal },
                 padding = { left = 1 },
             })
 
