@@ -42,12 +42,21 @@ sudo pacman -S neovim ripgrep fd
 
 ### Instructions for Zsh
 
-No dependencies.
+Depends on `fzf`.
 
 ```
-sudo pacman -S zsh
+sudo pacman -S zsh fzf
 ./install zsh
 ```
+
+If you are also using Neovim, you can add the following macros to your `.zshrc`:
+
+```
+fze() { fzf -m --preview='bat --color=always {}' --bind 'enter:become(nvim {+})'; }
+fzd() { cd $(fd -t=d | fzf --preview='ls {}') }
+```
+
+You also need `bat` for the first command to work, but you can remove the `--preview` part or replace it with `cat`. There is a Tokyo Night theme for bat here too, see the Extras section. The last command needs `fd`, but you should have it if you installed Neovim.
 
 ### Instructions for Alacritty
 
@@ -174,10 +183,6 @@ After that, use the [TokyoNight.colors](TokyoNight.colors) file on the Settings 
 ### Godot Engine
 
 There's a Godot Game Engine editor saved theme and layout, just put the files in [extras/godot](extras/godot) at `~/.config/godot`. It's basically Tokyo Night Godot, as well as my own personal layout.
-
-### bat
-
-There's a Tokyo Night theme [bat](https://github.com/sharkdp/bat), just read [this section](https://github.com/sharkdp/bat#adding-new-themes) on how to add themes after downloading [extras/bat/tokyonight_night.tmTheme](extras/bat/tokyonight_night.tmTheme).
 
 ### Firefox
 

@@ -9,6 +9,7 @@ export EDITOR='nvim'
 source $HOME/dotfiles/zsh/colored-ls.zsh
 source $HOME/dotfiles/zsh/prompt-style.zsh
 source $HOME/dotfiles/zsh/vi-mode-cursor.zsh
+source $HOME/dotfiles/zsh/setup-fzf.zsh
 
 autoload -U compinit; compinit
 
