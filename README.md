@@ -186,4 +186,4 @@ There's a Godot Game Engine editor saved theme and layout, just put the files in
 
 ### Firefox
 
-No files contained here, but for a Tokyo Night themed Firefox, use [this theme](https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-milav/). If you're on the desktop configs contained here, might as well install [FF-ULTIMA](https://github.com/soulhotel/FF-ULTIMA) as well and set `ultima.disable.windowcontrols.button = false`, `ultima.navbar.hide.buttons = false`, `ultima.tabs.tabCounter = false` and `ultima.urlbar.centered = false`.
+No files contained here, but for a Tokyo Night themed Firefox, use [this theme](https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-milav/). If you're on the desktop configs contained here, might as well install [FF-ULTIMA](https://github.com/soulhotel/FF-ULTIMA) as well and set `ultima.disable.windowcontrols.button = false`, `ultima.navbar.hide.buttons = false`, `ultima.tabs.tabCounter = false`, `ultima.urlbar.centered = false` and `browser.tabs.insertAfterCurrent = false`.
