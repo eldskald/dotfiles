@@ -33,10 +33,10 @@ First, download or clone this repo in your home directory. **It must be on the h
 
 ### Instructions for Neovim
 
-You need `ripgrep` and `fd`. Having `wl-clipboard` if you're on Wayland might be important too if you want Neovim to share the system clipboard.
+You need `ripgrep`, `fd` and `tree-sitter-cli`. Having `wl-clipboard` if you're on Wayland might be important too if you want Neovim to share the system clipboard.
 
 ```
-sudo pacman -S neovim ripgrep fd
+sudo pacman -S neovim ripgrep fd tree-sitter-cli
 ./install neovim
 ```
 
