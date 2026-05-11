@@ -26,5 +26,15 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^E' edit-command-line
 
+# Vi mode
 bindkey -v
 export KEYTIMEOUT=1
+
+# aliases
+alias c1='cd ..'
+alias c2='cd ../..'
+alias c3='cd ../../..'
+alias c4='cd ../../../..'
+alias c5='cd ../../../../..'
+alias c6='cd ../../../../../..'
+alias ch='cd ~'
