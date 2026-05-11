@@ -12,8 +12,13 @@ precmd() {
     vcs_info
 }
 
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+function virtualenv_info() {
+    [[ -n "$VIRTUAL_ENV" ]] && echo " $F{green}(${VIRTUAL_ENV:t})%f"
+}
+
 unsetopt PROMPT_SP
 setopt PROMPT_SUBST
 
-PROMPT='%F{blue}┌[%f%B%n%F{blue}@%f%m%b%F{blue}]%f${vcs_info_msg_0_} %(?..%F{blue}[%f%F{red}%?%f%F{blue}]%f)
+PROMPT='%F{blue}┌[%f%B%n%F{blue}@%f%m%b%F{blue}]%f$(virtualenv_info)${vcs_info_msg_0_} %(?..%F{blue}[%f%F{red}%?%f%F{blue}]%f)
 %F{blue}└[%f%B%~%b%F{blue}]>%f '
