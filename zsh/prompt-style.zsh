@@ -14,7 +14,7 @@ precmd() {
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 function virtualenv_info() {
-    [[ -n "$VIRTUAL_ENV" ]] && echo " $F{green}(${VIRTUAL_ENV:t})%f"
+    [[ -n "$VIRTUAL_ENV" ]] && echo " %F{green}(${VIRTUAL_ENV:t})%f"
 }
 
 unsetopt PROMPT_SP
