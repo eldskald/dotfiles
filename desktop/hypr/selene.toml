@@ -1,0 +1,4 @@
+std="hl"
+
+[lints]
+mixed_table = "allow"

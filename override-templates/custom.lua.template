@@ -1,0 +1,65 @@
+# This file is for extra customizations, like the nvidia env vars, other app
+# launchers, etc. This entire directory is ignored by the repo and this file in
+# particular is sourced last. You can put other files on this directory and
+# source them here as well.
+
+# hl.env('LIBVA_DRIVER_NAME', 'nvidia')
+# hl.env('__GLX_VENDER_LIBRARY_NAME', 'nvidia')
+#
+# hl.monitor({
+#     output = 'DP-2',
+#     mode = '2560x1440@120',
+#     position = '0x0',
+#     scale = 1.33,
+# })
+#
+# hl.monitor({
+#     output = 'DP-1',
+#     mode = '1920x1080@120',
+#     position = '-1920x0',
+#     scale = 1,
+# })
+#
+# hl.config({
+#     cursor = {
+#         default_monitor = 'DP-2',
+#     },
+#
+#     xwayland = {
+#         force_zero_scaling = true,
+#     },
+# })
+#
+# hl.workspace_rule({
+#     workspace = '1',
+#     monitor = 'DP-2',
+#     persistent = true,
+#     default = true,
+# })
+# hl.workspace_rule({ workspace = '2', monitor = 'DP-2', persistent = true })
+# hl.workspace_rule({ workspace = '3', monitor = 'DP-2', persistent = true })
+# hl.workspace_rule({ workspace = '4', monitor = 'DP-2', persistent = true })
+# hl.workspace_rule({
+#     workspace = 5,
+#     monitor = 'DP-1',
+#     persistent = true,
+#     default = true,
+# })
+# hl.workspace_rule({ workspace = '6', monitor = 'DP-1', persistent = true })
+# hl.workspace_rule({ workspace = '7', monitor = 'DP-1', persistent = true })
+# hl.workspace_rule({ workspace = '8', monitor = 'DP-1', persistent = true })
+#
+# hl.window_rule({ match = { workspace = 1 }, float = true })
+# hl.window_rule({ match = { workspace = 5 }, float = true })
+#
+# hl.window_rule({
+#     match = { class = 'Alacritty' },
+#     border_size = 0,
+# })
+#
+# hl.bind('SUPER + Return', hl.dsp.exec_cmd('alacritty'))
+# hl.bind(
+#     'SUPER + SHIFT + Return',
+#     hl.dsp.exec_cmd('alacritty'),
+#     { float = true }
+# )

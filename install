@@ -49,7 +49,7 @@ do
         cp ~/dotfiles/desktop/katerc ~/.config/
         cp -r ~/dotfiles/desktop/haruna/ ~/.config/
         mkdir ~/.config/hypr/custom
-        cp override-templates/custom.conf.template ~/.config/hypr/custom/custom.conf
+        cp override-templates/custom.lua.template ~/.config/hypr/custom/custom.lua
         ln -s ~/dotfiles/wallpapers/ ~/wallpapers
     fi
 done

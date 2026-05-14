@@ -1,0 +1,5 @@
+require('configs.settings')
+require('configs.visuals')
+require('configs.keybindings')
+require('configs.windowrules')
+require('custom.custom')
