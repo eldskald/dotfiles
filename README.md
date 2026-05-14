@@ -160,7 +160,7 @@ After installing the dotfiles, a `override.toml` file will be added to `~/.confi
 
 ### The desktop environment
 
-After installing the dotfiles, a `custom.conf` file will be added to `~/.config/hypr/custom/` to add or override any one of the configs. Use to setup monitors on your different machine, integrate your terminal emulator, etc.
+After installing the dotfiles, a `custom.lua` file will be added to `~/.config/hypr/custom/` to add or override any one of the configs. Use to setup monitors on your different machine, integrate your terminal emulator, etc.
 
 The rest aren't really customizable yet, with some exceptions. The install script symlinks some files and just copies others. The ones that are not symlinked will not affect this repo, and thus will not be updated on a `git pull`, unlike the symlinked ones. The symlinked ones are Noctalia and the GTK folders, while the Qt apps rc files will be copied.
 
