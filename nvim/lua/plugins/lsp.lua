@@ -168,8 +168,8 @@ return {
                 ['<C-e>'] = cmp.mapping.abort(),
                 ['<C-j>'] = cmp.mapping.select_next_item(cmp_select_opts),
                 ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select_opts),
-                ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-                ['<C-i>'] = cmp.mapping.scroll_docs(4),
+                ['<C-u>'] = cmp.mapping.scroll_docs(1),
+                ['<C-i>'] = cmp.mapping.scroll_docs(-1),
                 ['<Down>'] = cmp.mapping(function(fallback)
                     cmp.close()
                     fallback()
