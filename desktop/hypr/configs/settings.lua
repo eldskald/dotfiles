@@ -34,6 +34,7 @@ hl.config({
     input = {
         kb_layout = 'us',
         kb_variant = 'intl',
+        kb_options = "caps:swapescape",
 
         follow_mouse = 2,
         float_switch_override_focus = 0,
