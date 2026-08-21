@@ -108,6 +108,8 @@ format = "{:%H:%M   %A, %B %d}"
 art_size = 20
 max_length = 500
 title_scroll = "on_hover"
+artist_first = true
+hide_when_no_media = true
 
 [widget.network]
 show_label = false
