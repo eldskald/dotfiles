@@ -63,10 +63,7 @@ end
 hl.bind('SUPER + mouse:272', hl.dsp.window.drag(), { mouse = true })
 
 -- Launchers
-hl.bind(
-    'SUPER + R',
-    hl.dsp.exec_cmd('qs -c noctalia-shell ipc call launcher toggle')
-)
+hl.bind('SUPER + R', hl.dsp.exec_cmd('noctalia msg panel-toggle launcher'))
 hl.bind('SUPER + S', hl.dsp.exec_cmd('ksysguard'))
 hl.bind('SUPER + E', hl.dsp.exec_cmd('dolphin'))
 hl.bind('Print', hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))

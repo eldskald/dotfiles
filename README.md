@@ -72,7 +72,7 @@ sudo pacman -S alacritty otf-hermit-nerd
 You need the following packages installed. These names are based on Arch's repository, as well as AUR, so if you're installing on a different distro some of these packages might have a different name.
 
 ```
-yay -S networkmanager pipewire wireplumber pipewire-alsa noto-fonts hyprland hyprpolkitagent hyprqt6engine xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde archlinux-xdg-menu noctalia-shell cliphist wlsunset nwg-look qt5-wayland qt6-wayland adw-gtk-theme xcursor-simp1e-tokyo-night-light udiskie wl-clipboard grim slurp breeze dolphin ark kate gwenview okular haruna kolourpaint kcalc partitionmanager isoimagewriter hyprsysteminfo ksysguard6-git pavucontrol-qt sddm sddm-silent-theme playerctl
+yay -S networkmanager pipewire wireplumber pipewire-alsa noto-fonts hyprland hyprpolkitagent hyprqt6engine xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde archlinux-xdg-menu noctalia cliphist wlsunset nwg-look qt5-wayland qt6-wayland adw-gtk-theme xcursor-simp1e-tokyo-night-light udiskie wl-clipboard grim slurp breeze dolphin ark kate gwenview okular haruna kolourpaint kcalc partitionmanager isoimagewriter hyprsysteminfo ksysguard6-git pavucontrol-qt sddm sddm-silent-theme playerctl
 ```
 
 After that, run this so GTK apps get properly themed.

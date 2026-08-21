@@ -2,7 +2,7 @@ hl.env('QT_QPA_PLATFORMTHEME', 'hyprqt6engine')
 hl.env('XDG_MENU_PREFIX', 'arch-')
 
 hl.on('hyprland.start', function()
-    hl.exec_cmd('qs -c noctalia-shell')
+    hl.exec_cmd('noctalia')
     hl.exec_cmd('systemctl --user start hyprpolkitagent')
     hl.exec_cmd('udiskie')
 end)
@@ -34,7 +34,7 @@ hl.config({
     input = {
         kb_layout = 'us',
         kb_variant = 'intl',
-        kb_options = "caps:swapescape",
+        kb_options = 'caps:swapescape',
 
         follow_mouse = 2,
         float_switch_override_focus = 0,
