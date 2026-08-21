@@ -10,7 +10,7 @@ radius = 10
 scale = 1.1000000089406967
 start = [ "workspaces", "active_window" ]
 thickness = 44
-widget_spacing = 8
+widget_spacing = 12
 
 [location]
 address = "São Paulo, Brazil"
@@ -82,8 +82,12 @@ font_family = "Ubuntu Nerd Font"
 [theme]
 builtin = "Tokyo-Night"
 
+[osd.kinds]
+media = false
+
 [wallpaper]
 directory = "/home/rafael/wallpapers"
+per_monitor_directories = true
 
     [wallpaper.automation]
     enabled = true
@@ -97,9 +101,11 @@ directory = "/home/rafael/wallpapers"
 
     [wallpaper.monitors.DP-1]
     path = "/home/rafael/wallpapers/dark-souls-1.jpg"
+    directory = "/home/rafael/wallpapers"
 
     [wallpaper.monitors.DP-2]
     path = "/home/rafael/wallpapers/dark-souls-1.jpg"
+    directory = "/home/rafael/wallpapers"
 
 [widget.clock]
 format = "{:%H:%M   %A, %B %d}"
