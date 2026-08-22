@@ -84,6 +84,7 @@ builtin = "Tokyo-Night"
 
 [osd.kinds]
 media = false
+lock_keys = false
 
 [wallpaper]
 directory = "/home/rafael/wallpapers"
