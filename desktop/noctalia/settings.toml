@@ -3,7 +3,7 @@ config_version = 12
 [bar.default]
 background_opacity = 0.89999997988343239
 concave_edge_corners = false
-end = [ "media", "tray", "network", "bluetooth", "volume", "battery", "control-center" ]
+end = [ "media", "tray", "cpu", "ram", "sysmon", "temp", "network", "bluetooth", "volume", "battery" ]
 margin_edge = 8
 margin_ends = 8
 radius = 10
@@ -113,7 +113,7 @@ format = "{:%H:%M   %A, %B %d}"
 
 [widget.media]
 art_size = 20
-max_length = 500
+max_length = 350
 title_scroll = "on_hover"
 artist_first = true
 hide_when_no_media = true
@@ -123,3 +123,16 @@ show_label = false
 
 [widget.workspaces]
 show_labels = false
+
+[widget.cpu]
+visualization = "none"
+
+[widget.ram]
+visualization = "none"
+
+[widget.sysmon]
+stat = "gpu_usage"
+visualization = "none"
+
+[widget.temp]
+visualization = "none"
