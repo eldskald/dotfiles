@@ -3,7 +3,7 @@ config_version = 12
 [bar.default]
 background_opacity = 0.89999997988343239
 concave_edge_corners = false
-end = [ "media", "tray", "cpu", "ram", "sysmon", "temp", "network", "bluetooth", "volume", "battery" ]
+end = [ "media", "tray", "ksysguard", "network", "bluetooth", "volume", "battery" ]
 margin_edge = 8
 margin_ends = 8
 radius = 10
@@ -110,6 +110,14 @@ per_monitor_directories = true
 
 [widget.clock]
 format = "{:%H:%M   %A, %B %d}"
+
+[widget.ksysguard]
+glyph = "heart-rate-monitor"
+tooltip = "System Monitor"
+type = "custom_button"
+
+    [widget.ksysguard.actions]
+    left = "exec ksysguard"
 
 [widget.media]
 art_size = 20

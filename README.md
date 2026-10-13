@@ -56,7 +56,7 @@ fze() { fzf -m --preview='bat --color=always {}' --bind 'enter:become(nvim {+})'
 fzd() { cd $(fd -t=d | fzf --preview='ls {}') }
 ```
 
-You also need `bat` for the first command to work, but you can remove the `--preview` part or replace it with `cat`. There is a Tokyo Night theme for bat here too, see the Extras section. The last command needs `fd`, but you should have it if you installed Neovim.
+You also need `bat` for the first command to work, but you can remove the `--preview` part or replace it with `cat` if you don't want it. But if you do want it, there is a Tokyo Night theme for bat here too, see the Extras section. The last command needs `fd`, but you should have it if you installed Neovim.
 
 ### Instructions for Alacritty
 
@@ -72,7 +72,7 @@ sudo pacman -S alacritty otf-hermit-nerd
 You need the following packages installed. These names are based on Arch's repository, as well as AUR, so if you're installing on a different distro some of these packages might have a different name.
 
 ```
-yay -S networkmanager pipewire wireplumber pipewire-alsa noto-fonts hyprland hyprpolkitagent hyprqt6engine xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde archlinux-xdg-menu noctalia cliphist wlsunset nwg-look qt5-wayland qt6-wayland adw-gtk-theme xcursor-simp1e-tokyo-night-light udiskie wl-clipboard grim slurp breeze dolphin ark kate gwenview okular haruna kolourpaint kcalc partitionmanager isoimagewriter hyprsysteminfo ksysguard6-git pavucontrol-qt sddm sddm-silent-theme playerctl
+yay -S networkmanager pipewire wireplumber pipewire-alsa noto-fonts hyprland hyprpolkitagent hyprqt6engine xdg-user-dirs xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde archlinux-xdg-menu noctalia cliphist wlsunset nwg-look qt5-wayland qt6-wayland adw-gtk-theme xcursor-simp1e-tokyo-night-light udiskie wl-clipboard grim slurp breeze dolphin ark kate gwenview okular haruna kolourpaint kcalc partitionmanager isoimagewriter ksysguard6-git pavucontrol-qt sddm sddm-silent-theme playerctl
 ```
 
 After that, run this so GTK apps get properly themed.
@@ -100,7 +100,7 @@ With all of that out of the way, you can run the install script. It will create 
 ./install desktop
 ```
 
-This installation has no terminal emulator included, plus that PC might require additional setup, like monitors, Nvidia and additional window rules and keybindings. Put them on `.config/hypr/custom`.
+If the PC requires additional setup, like monitors, Nvidia and additional window rules and keybindings, put them on `.config/hypr/custom`.
 
 This setup also doesn't include a terminal emulator, you can install the Alacritty configs if you want. Whichever you pick, you need to set it as your default terminal for `dolphin` to open it. You can do it by adding the following lines on `~/.config/kdeglobals`:
 
@@ -166,6 +166,20 @@ The rest aren't really customizable yet, with some exceptions. The install scrip
 
 ## Extras
 
+### bat
+
+Put [tokyonight_night.tmTheme](extras/bat/tokyonight_night.tmTheme) on `~/.config/bat/themes`.
+
+```
+cp ~/dotfiles/extras/bat/tokyonight_night.tmTheme ~/.config/bat/themes/
+```
+
+Then, export the env var on your system.
+
+```
+export BAT_THEME=tokyonight_night
+```
+
 ### KDE Plasma
 
 Run the following:
@@ -183,7 +197,3 @@ After that, use the [TokyoNight.colors](TokyoNight.colors) file on the Settings 
 ### Godot Engine
 
 There's a Godot Game Engine editor saved theme and layout, just put the files in [extras/godot](extras/godot) at `~/.config/godot`. It's basically Tokyo Night Godot, as well as my own personal layout.
-
-### Firefox
-
-No files contained here, but for a Tokyo Night themed Firefox, use [this theme](https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-milav/). If you're on the desktop configs contained here, might as well install [FF-ULTIMA](https://github.com/soulhotel/FF-ULTIMA) as well and set `ultima.disable.windowcontrols.button = false`, `ultima.navbar.hide.buttons = false`, `ultima.tabs.tabCounter = false`, `ultima.urlbar.centered = false` and `browser.tabs.insertAfterCurrent = false`.
